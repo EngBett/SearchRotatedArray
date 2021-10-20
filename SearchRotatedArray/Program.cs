@@ -10,14 +10,13 @@ namespace SearchRotatedArray
             //Get the pivot
             while(l<r){
                 int mid = l+(r-l)/2;
-                if(nums[mid]>r){
+                if(nums[mid]>nums[r]){
                     l=mid+1;
                 }else{
                     r=mid;
                 }
             }
         
-            //[4,5,6,7,0,1,2]
         
             int start = 0;
             int end = nums.Length-1;
@@ -49,8 +48,8 @@ namespace SearchRotatedArray
     {
         static void Main(string[] args)
         {
-            var nums = new[] {5, 1, 3};
-            Console.WriteLine(Solution.Search(nums,3));
+            var nums = new[] {3,4,5,6,1,2};
+            Console.WriteLine(Solution.Search(nums,2));
         }
     }
 }
